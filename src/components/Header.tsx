@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MenuIcon } from "../assets/svgs";
+import logo from "../assets/logo.svg";
 
 type HeaderProps = {
   onRequestDemo: () => void;
@@ -12,7 +13,7 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
     <>
       <header className="sticky top-0 z-1000 bg-white px-6 py-4 shadow-sm">
         <div className="mx-5 flex max-w-1200px items-center justify-between md:mx-10">
-          <img src="/src/assets/logo.svg" alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />
 
           
           <nav className="hidden items-center gap-6 md:flex">

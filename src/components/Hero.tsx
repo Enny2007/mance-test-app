@@ -2,6 +2,7 @@ import dashboardImg from "../assets/dashboard.svg";
 import badgeImg from "../assets/badge.svg";
 import missionPlanning from "../assets/mission-planning1.png";
 import kpi from "../assets/KPI1.png";
+import heroBg from "../assets/hero-bg.svg";
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
       <div
         className=
         "relative  mx-auto mt-5 flex max-w-1200px flex-col rounded-[20px] bg-cover bg-center px-6  pt-100px text-center text-white md:px-6 pb-320px"
-        style={{ backgroundImage: "url(/src/assets/hero-bg.svg)" }}
+        style={{ backgroundImage: `url(${heroBg})` }}
       >
       
         <div className="mx-auto w-full max-w-900px">
