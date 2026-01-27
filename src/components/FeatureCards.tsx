@@ -18,8 +18,9 @@ const features = [
       description:
         "Built as a modern cloud-native platform, the system is accessible anywhere, anytime.",
       benefits: [
-        "Access the platform securely from any location without infrastructure constraints.",
-        "Cloud-native architecture ensures scalability, availability, and resilience.",
+        "Data is securely stored,regurlarly backed up,and protected through role-based access controls.",
+        "Ensures users only see what they are authorised to see",
+        "As your organization grows,the platform scales seamlessl without infrastructure complxity or downtime.",
       ],
     },
   },
@@ -33,8 +34,8 @@ const features = [
       description:
         "Translate leadership intent into coordinated execution across every level of the organization.",
       benefits: [
-        "Strategic goals and priorities cascade naturally from leaders to teams.",
-        "Every level understands not just what to do, but why it matters.",
+        "Strategic goals, priorities, and success measures cascade naturally from leaders to teams and individuals through structured task hierarchies.",
+        "Each level understands not just what to do, but why it matters and how it contributes to the broader mission",
       ],
     },
   },
@@ -46,8 +47,8 @@ const features = [
       title: "Built-in KPI & Reporting",
       description: "Move beyond status updates and assumptions.",
       benefits: [
-        "Track performance using measurable outcomes across reporting cycles.",
-        "Enable data-driven decisions with real-time visibility into execution.",
+        "Built-in KPIs and outcome reporting allow individuals and teams to set targets, track actual results, and report progress across monthly, quarterly, biannual, or annual cycles",
+        "Leaders gain real-time visibility into performance, enabling data-driven decisions and early intervention where execution is falling behind.",
       ],
     },
   },
@@ -61,8 +62,8 @@ const features = [
       description:
         "Execution improves when communication is structured and purposeful.",
       benefits: [
-        "Teams collaborate around shared missions and outcomes.",
-        "Clear ownership and visibility reduce miscommunication.",
+        "Teams collaborate around shared missions, tasks, and outcomes within a single system of record.",
+        "Clear ownership, shared visibility, and aligned goals reduce miscommunication and keep everyone focused on execution rather than coordination overhead.",
       ],
     },
   },
@@ -76,8 +77,8 @@ const features = [
       description:
         "Whether you’re a small team or a large enterprise, the platform adapts to your organizational structure.",
       benefits: [
-        "Start with a single team and scale across departments and regions.",
-        "The same structure and clarity apply at every size.",
+        "Start with a single team or department and scale across functions, business units, and geographies without reworking your strategy model",
+        "The same clarity and structure apply at every size.",
       ],
     },
   },
@@ -91,8 +92,8 @@ const features = [
       description:
         "Break down complex goals into executable actions without losing alignment.",
       benefits: [
-        "Strategic initiatives are decomposed into cascaded tasks.",
-        "Ensures clarity, accountability, and momentum from strategy to execution.",
+        "Strategic initiatives are decomposed into specified and cascaded tasks, allowing each level to refine execution while remaining aligned with leadership intent",
+        "This dynamic decomposition ensures clarity, accountability, and momentum from high-level strategy to day-to-day execution.",
       ],
     },
   },
@@ -105,7 +106,7 @@ const Cards = () => {
     typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
 
   return (
-    <div className="flex justify-center py-28">
+    <div className="flex justify-center py-10">
       <div className="grid grid-cols-1 gap-10 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-3 max-w-1200px w-full px-8">
         {features.map((feature, index) => (
           <div
@@ -120,7 +121,7 @@ const Cards = () => {
             }
           >
             <div
-              className={`relative h-125 w-full rounded-2xl bg-[#fafafa] px-10 pt-10 pb-14 shadow-sm transition-transform duration-500 ease-in-out ${
+              className={`relative h-135 mb-5 w-full rounded-2xl bg-[#fafafa] px-10 pt-10 pb-14 shadow-sm transition-transform duration-500 ease-in-out ${
                 activeIndex === index ? "-translate-y-8" : "translate-y-0"
               }`}
             >
@@ -131,7 +132,7 @@ const Cards = () => {
               />
 
               <div className="mt-70">
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900 pt-5">
                   {feature.title}
                 </h3>
                 <p className="mt-1 text-xl font-medium text-gray-600 opacity-80">

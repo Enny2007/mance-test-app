@@ -57,12 +57,12 @@ const PricingSection: React.FC = () => {
     <section className="bg-white py-24 px-10">
       <div className="max-w-sm mx-auto">
         <img src={pricingBadge} alt="Pricing Badge" className="mb-4 mx-auto " />
-        <h2 className="text-4xl font-semibold mb-4  md:text-5xl">
-          Pick Your Plan,<span className="text-[#008080]">Choose </span> Your
+        <h2 className="text-4xl font-semibold mb-4  md:text-5xl w-120">
+          Pick Your Plan, {" "}<span className="text-[#008080]">Choose </span> Your
           Product
         </h2>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {pricingPlans.map((plan) => (
           <PricingCard key={plan.title} {...plan} />
         ))}

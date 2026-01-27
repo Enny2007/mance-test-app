@@ -4,24 +4,28 @@ import healthcareImg from "../assets/healthcare.png";
 
 export interface UseCase {
   title: string;
+  highlight:string,
   description: string;
   image: string;
 }
 
 export const useCases: UseCase[] = [
   {
-    title: "Enterprises (Business & Corporate)",
+    title: "Enterprises",
+    highlight: "Business & Corporate",
     description: "Turn Business Strategy Into Tangible Results",
     image: enterpriseImg,
   },
   {
-    title: "Government & Public Sector",
+    title: "Government &",
+    highlight: "Public Sector",
     description:
       "Driving policy execution with transparency and accountability",
     image: governmentImg,
   },
   {
-    title: "Healthcare & Emergency Services",
+    title: "Healthcare & ",
+    highlight:"Emergency Services",
     description:
       "Transform Healthcare Strategy Into Measurable Outcomes",
     image: healthcareImg,

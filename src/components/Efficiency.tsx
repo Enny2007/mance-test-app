@@ -38,7 +38,7 @@ export default function Efficiency() {
             <img
               src={efficiencyPeople}
               alt="image"
-              className="w-full h-full object-cover md:object-contain mt-10"
+              className="w-full h-full object-cover md:object-fill "
             />
           </div>
         </div>

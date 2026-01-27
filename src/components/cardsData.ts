@@ -10,6 +10,7 @@ import num4 from "../assets/num4.svg";
 export interface CardData {
   number: string;
   title: string;
+  highlight: string;
   text: string;
   image: string;
   bg: string;
@@ -19,15 +20,17 @@ export interface CardData {
 export const cards: CardData[] = [
   {
     number: num1,
-    title: "Set Your Strategic Intent",
-    text: "Define the mission and vision,two-levels up and one-level up objectives, measures of success, freedom, and constraints.",
+    title: "Set Your Strategic",
+    highlight: "Intent",
+    text: "Define the mission and vision, two-levels up and one-level up objectives, measures of success, freedom, and constraints.",
     image: img1,
-    bg: "bg-[#F7BFB]",
+    bg: "bg-[#E5E9EB]",
     textColor: "text-gray-900",
   },
   {
     number: num2,
-    title: "Decompose And Assign Task",
+    title: "Decompose And Assign",
+    highlight: "Task",
     text: "Create specified tasks, derive implied tasks, and assign them to downlines across the mission hierarchy.",
     image: img2,
     bg: "bg-[#071818]",
@@ -35,7 +38,8 @@ export const cards: CardData[] = [
   },
   {
     number: num3,
-    title: "Monitor KPIs And Adjust",
+    title: "Monitor KPIs And",
+    highlight: "Adjust",
     text: "Set targets and report actual outcomes for measures of success and tasks across your chosen reporting cycle.",
     image: img3,
     bg: "bg-[#008080]",
@@ -43,8 +47,9 @@ export const cards: CardData[] = [
   },
   {
     number: num4,
-    title: "Collaborate With Your Team",
-    text: "Work with downlines and managers within shared mission plans to maintain alignment and execution clarity. ",
+    title: "Collaborate With Your",
+    highlight: "Team",
+    text: "Work with downlines and managers within shared mission plans to maintain alignment and execution clarity.",
     image: img4,
     bg: "bg-[#E5E9EB]",
     textColor: "text-gray-900",

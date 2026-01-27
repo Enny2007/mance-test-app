@@ -26,8 +26,8 @@ export default function PricingCard({
     >
     
       <div>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-4xl font-semibold">{title}</h3>
+        <div className="flex items-center justify-between mb-4 ">
+          <h3 className="text-3xl font-semibold">{title}</h3>
           <span
             className={`text-xs px-3 py-1 rounded-md 
               ${
@@ -42,7 +42,7 @@ export default function PricingCard({
 
         
         <div className="flex items-end gap-2 mb-6">
-          <span className="text-4xl font-medium">{price}/</span>
+          <span className="text-4xl font-bold">{price}/</span>
           <span className="text-xl opacity-80">Monthly</span>
           <span
             className={`text-xs px-2 py-1 rounded-md
@@ -70,7 +70,7 @@ export default function PricingCard({
       
       <a
         href="#"
-        className={`text-center py-3 rounded-lg border transition
+        className={`text-center py-3 rounded-lg border transition font-bold
           ${
             highlighted
               ? "border-white text-white hover:bg-gray-200 hover:text-teal-700"

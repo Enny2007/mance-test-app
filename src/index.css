@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "newFont";
+  src: url("./assets/fonts/aeoniktrial-regular.otf") format("woff2");
+ 
+}
+
+@font-face {
+  font-family: "newFont";
+  src: url("./assets/fonts/aeoniktrial-regular.otf") format("woff2");
+  
+}
+
+body {
+  font-family: "newFont", sans-serif;
+}

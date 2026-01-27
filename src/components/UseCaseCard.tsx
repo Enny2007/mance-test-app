@@ -28,17 +28,20 @@ const UseCaseCard: React.FC<Props> = ({ data, isActive, onHover }) => {
           `}
         >
           <h3 className="text-3xl font-semibold mb-2">
-            {data.title}
+            {data.title}{" "}
+            <span className="text-gray-300"> 
+              {data.highlight}
+              </span>
           </h3>
 
-          <p className="text-sm opacity-80">
+          <p className="text-sm ">
             {data.description}
           </p>
         </div>
 
         
         {isActive && (
-          <div className="w-1/2 h-full">
+          <div className="w-1/2 h-full cursor-pointer">
             <img
               src={data.image}
               alt={data.title}
