@@ -6,6 +6,7 @@ interface PricingCardProps {
   price: string;
   features: string[];
   highlighted?: boolean;
+  onSelect: () => void;
 }
 
 export default function PricingCard({
@@ -14,6 +15,7 @@ export default function PricingCard({
   price,
   features,
   highlighted = false,
+  onSelect,
 }: PricingCardProps) {
   return (
     <div
@@ -24,9 +26,8 @@ export default function PricingCard({
             : "bg-white border border-gray-200"
         }`}
     >
-    
       <div>
-        <div className="flex items-center justify-between mb-4 ">
+        <div className="flex items-center justify-between mb-4">
           <h3 className="text-3xl font-semibold">{title}</h3>
           <span
             className={`text-xs px-3 py-1 rounded-md 
@@ -40,7 +41,6 @@ export default function PricingCard({
           </span>
         </div>
 
-        
         <div className="flex items-end gap-2 mb-6">
           <span className="text-4xl font-bold">{price}/</span>
           <span className="text-xl opacity-80">Monthly</span>
@@ -56,7 +56,6 @@ export default function PricingCard({
           </span>
         </div>
 
-       
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-3">
@@ -67,9 +66,8 @@ export default function PricingCard({
         </ul>
       </div>
 
-      
-      <a
-        href="#"
+      <button
+        onClick={onSelect}
         className={`text-center py-3 rounded-lg border transition font-bold
           ${
             highlighted
@@ -78,7 +76,7 @@ export default function PricingCard({
           }`}
       >
         Get Started
-      </a>
+      </button>
     </div>
   );
 }

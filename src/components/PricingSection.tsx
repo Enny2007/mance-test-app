@@ -1,4 +1,6 @@
+import { useState } from "react";
 import PricingCard from "./PricingCard";
+import PricingModal from "./PricingModal";
 import pricingBadge from "../assets/pricingBadge.svg";
 
 const pricingPlans = [
@@ -52,22 +54,56 @@ const pricingPlans = [
   },
 ];
 
+export type PricingPlan = (typeof pricingPlans)[number];
+
 const PricingSection: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
+
+  const handleSelectPlan = (plan: PricingPlan) => {
+    setSelectedPlan(plan);
+    setIsPricingOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsPricingOpen(false);
+    setSelectedPlan(null);
+  };
+
+  const handleVerifyEmail = () => {
+    // OTP modal will be opened here next
+    console.log("Verify email clicked");
+  };
+
   return (
     <section className="bg-white py-24 px-10">
       <div className="max-w-sm mx-auto">
-        <img src={pricingBadge} alt="Pricing Badge" className="mb-4 mx-auto " />
-        <h2 className="text-4xl font-semibold mb-4  md:text-5xl w-120">
-          Pick Your Plan, {" "}<span className="text-[#008080]">Choose </span> Your
-          Product
+        <img src={pricingBadge} alt="Pricing Badge" className="mb-4 mx-auto" />
+        <h2 className="text-4xl font-semibold mb-4 md:text-5xl w-120">
+          Pick Your Plan,{" "}
+          <span className="text-[#008080]">Choose </span> Your Product
         </h2>
       </div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {pricingPlans.map((plan) => (
-          <PricingCard key={plan.title} {...plan} />
+          <PricingCard
+            key={plan.title}
+            {...plan}
+            onSelect={() => handleSelectPlan(plan)}
+          />
         ))}
       </div>
+
+      {/* Pricing Modal */}
+      <PricingModal
+        isOpen={isPricingOpen}
+        plan={selectedPlan}
+        onClose={handleCloseModal}
+        onVerifyEmail={handleVerifyEmail}
+      />
     </section>
   );
 };
+
 export default PricingSection;
