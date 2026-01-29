@@ -1,39 +1,19 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import DemoModal from "./components/DemoModal";
-import Feature from "./components/Feature";
-import Cards from "./components/FeatureCards";
-import ScrollCards from "./components/ScrollRevealCards";
-import UseCasesSection from "./components/UseCasesSection";
-import PricingSection from "./components/PricingSection";
-import Demo from "./components/Demo";
-import SupportResources from "./components/SupportResources";
-import EfficiencyBanner from "./components/Efficiency";
-import Footer from "./components/Footer";
-function App() {
-  const [showDemo, setShowDemo] = useState(false);
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import UseCaseDetail from "./pages/UseCaseDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
+function App() {
   return (
     <>
-      <Header onRequestDemo={() => setShowDemo(true)} />
-      <Hero />
-      <Feature/>
-      <Cards/>
-      <ScrollCards />
-      <UseCasesSection/>
-      <PricingSection/>
-      <Demo/>
-      <SupportResources/>
-      <EfficiencyBanner/>
-      <Footer/>
-      {showDemo && <DemoModal onClose={() => setShowDemo(false)} />}
-    </>     
+      <ScrollToTop />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/use-cases/:slug" element={<UseCaseDetail />} />
+      </Routes>
+    </>
   );
 }
 
 export default App;
-
-
-
-
