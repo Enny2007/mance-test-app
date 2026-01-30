@@ -40,7 +40,7 @@ const GovernmentChallenges = () => {
 
         {/*  Challenges Grid  */}
         <div className="relative grid grid-cols-1 gap-14 md:grid-cols-3">
-          {/* connector line (desktop only) */}
+          
           <div className="absolute left-0 right-0 top-8 hidden h-px border-t border-dashed border-gray-300 md:block" />
 
           {challenges.map((item, index) => (

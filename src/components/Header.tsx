@@ -36,7 +36,7 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
               Sign in
             </button>
 
-            {/* ✅ Request Demo */}
+            {/* Request Demo */}
             <button
               onClick={onRequestDemo}
               className="rounded-md bg-[#008080] px-5 py-2 text-sm font-medium text-white hover:bg-teal-800"
@@ -85,7 +85,7 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
             Contact Us
           </a>
 
-          {/* ✅ Mobile Request Demo */}
+          {/* Mobile Request Demo */}
           <button
             onClick={() => {
               setMenuOpen(false);

@@ -39,7 +39,7 @@ const GovernmentBenefits: React.FC = () => {
           How Mance Solves This
         </h2>
 
-        {/* ================= DESKTOP ================= */}
+        {/*  DESKTOP*/}
         <div className="hidden md:grid grid-cols-2 gap-24 items-start">
           {/* LEFT — ACCORDION */}
           <div>
@@ -98,7 +98,7 @@ const GovernmentBenefits: React.FC = () => {
                     </p>
                   )}
 
-                  {/* Bottom divider (except last) */}
+                 
                   
                 </div>
               );
@@ -115,7 +115,7 @@ const GovernmentBenefits: React.FC = () => {
           </div>
         </div>
 
-        {/* ================= MOBILE ================= */}
+        {/*MOBILE  */}
         <div className="md:hidden">
           {benefits.map((item, index) => {
             const isActive = index === activeIndex;

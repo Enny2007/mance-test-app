@@ -14,12 +14,12 @@ import GovernmentBenefits from "./GovernmentBenefits";
 const GovernmentLayout = () => {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
-  // ✅ open modal
+  // open modal
   const handleRequestDemo = () => {
     setIsDemoOpen(true);
   };
 
-  // ✅ close modal
+  // close modal
   const handleCloseDemo = () => {
     setIsDemoOpen(false);
   };

@@ -71,7 +71,7 @@ const PricingSection: React.FC = () => {
   };
 
   const handleVerifyEmail = () => {
-    // OTP modal will be opened here next
+    
     console.log("Verify email clicked");
   };
 

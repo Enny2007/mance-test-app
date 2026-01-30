@@ -16,7 +16,7 @@ export default function Demo({ onRequestDemo }: DemoProps) {
           className="w-full h-10 border border-gray-400 rounded-sm px-4 py-6 md:w-450"
         />
 
-        {/* ✅ SAME handler */}
+        {/*handler */}
         <button
           onClick={onRequestDemo}
           className="bg-[#008080] text-white px-6 py-3 rounded-md text-sm hover:opacity-60 transition md:w-150"

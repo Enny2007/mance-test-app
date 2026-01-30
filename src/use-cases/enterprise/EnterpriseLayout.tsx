@@ -19,26 +19,26 @@ import EntIcon5 from "../../assets/entIcon5.svg";
 import EntIcon6 from "../../assets/entIcon6.svg";
 
 import EnterpriseSolutions from "./EnterpriseSolutions";
-import EnterpriseFAQ from "./EnterpriseFaq";
+import EnterpriseFAQ from "./EnterpriseFAQ";
 import Demo from "../../components/Demo";
 
 const EnterpriseLayout = () => {
-  // ✅ modal state
+  // modal state
   const [isDemoOpen, setIsDemoOpen] = useState(false);
 
-  // ✅ open modal
+  // open modal
   const handleRequestDemo = () => {
     setIsDemoOpen(true);
   };
 
-  // ✅ close modal
+  // close modal
   const handleCloseDemo = () => {
     setIsDemoOpen(false);
   };
 
   return (
     <>
-      {/* ✅ Header uses same handler */}
+      {/* Header */}
       <Header onRequestDemo={handleRequestDemo} />
 
       {/* HERO SECTION */}

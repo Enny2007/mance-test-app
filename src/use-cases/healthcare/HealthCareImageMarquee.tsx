@@ -31,7 +31,7 @@ const HealthCareImageMarquee: React.FC = () => {
             animation: "marquee 25s linear infinite",
           }}
         >
-          {/* First set (normal) */}
+          {/* normal set */}
           <div className="flex gap-6">
             {images.map((img, i) => (
               <img
@@ -43,7 +43,7 @@ const HealthCareImageMarquee: React.FC = () => {
             ))}
           </div>
 
-          {/* Second set (faded / blurred) */}
+          {/*blurred set */}
           <div className="flex gap-6 ml-6 opacity-40 blur-[1px]">
             {images.map((img, i) => (
               <img
