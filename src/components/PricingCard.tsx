@@ -68,7 +68,7 @@ export default function PricingCard({
 
       <button
         onClick={onSelect}
-        className={`text-center py-3 rounded-lg border transition font-bold
+        className={`text-center cursor-pointer py-3 rounded-lg border transition font-bold
           ${
             highlighted
               ? "border-white text-white hover:bg-gray-200 hover:text-teal-700"
