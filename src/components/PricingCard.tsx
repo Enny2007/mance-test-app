@@ -19,7 +19,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`h-130 rounded-xl p-6 flex flex-col justify-between transition
+      className={`h-130 rounded-xl p-6 flex flex-col  justify-between transition
         ${
           highlighted
             ? "bg-[#008080] text-white"

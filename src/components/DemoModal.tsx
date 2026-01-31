@@ -6,7 +6,7 @@ const DemoModal = ({ onClose }: DemoModalProps) => {
   return (
     
     <div
-      className=" fixed inset-0 z-9999 flex justify-center bg-black/60  py-16 md:py-20 px-10 "
+      className=" fixed inset-0 z-50 flex justify-center bg-black/60  py-16 md:py-5 px-10 "
       onClick={onClose}
     >
     
@@ -15,9 +15,9 @@ const DemoModal = ({ onClose }: DemoModalProps) => {
                     sm:max-w-480px
                     md:max-w-560px
                     lg:max-w-640px
-                    max-h-[75vh] md:max-h-[65vh]
+                    max-h-[75vh] md:max-h-150
                     overflow-y-auto
-                    rounded-xl bg-white p-6 md:p-8 md:mx-40 md:my-2
+                    rounded-xl bg-white p-6 md:p-8 md:mx-40 md:my-1
                     "
         onClick={(e) => e.stopPropagation()}
       >
@@ -25,8 +25,20 @@ const DemoModal = ({ onClose }: DemoModalProps) => {
         <button
           onClick={onClose}
           className="absolute right-4 top-4 text-xl"
-        >
-          ×
+        > <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-8 h-10"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
         </button>
 
         

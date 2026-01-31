@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import MissionPlanImg from "../assets/pricingCard1.svg";
 import KpiModuleImg from "../assets/pricingCard2.svg";
 
@@ -19,17 +20,27 @@ export default function PricingModal({
   plan,
   onVerifyEmail,
 }: PricingModalProps) {
+  // Lock background scroll
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen || !plan) return null;
 
   return (
-    <div className="fixed inset-0 z-100000 flex items-center justify-center bg-black/40 ">
+    <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/40 px-4">
       {/* Modal */}
-      <div className="relative mr-22 max-w-5xl bg-white rounded-2xl w-80 max-h-[90vh]  overflow-hidden md:w-full md:mr-0">
+      <div className="relative w-full max-w-4xl bg-white rounded-2xl max-h-[90vh] overflow-hidden">
         
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10 md:mx-15 md:my-5"
+          className="absolute top-4 right-10 text-gray-400 hover:text-gray-600 z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +48,7 @@ export default function PricingModal({
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-10"
+            className="w-8 h-8"
           >
             <path
               strokeLinecap="round"
@@ -62,15 +73,15 @@ export default function PricingModal({
           <div className="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-6">
             
             {/* LEFT COLUMN */}
-            <div className="bg-[#FAFAFA]  rounded-lg p-4 sm:p-5 md:w-85">
-              <div className="flex gap-6">
-              <h3 className="text-lg font-semibold text-[#008080]">
-                {plan.title} Plan
-              </h3>
+            <div className="bg-[#FAFAFA] rounded-lg p-4 sm:p-5">
+              <div className="flex flex-wrap items-center gap-4">
+                <h3 className="text-lg font-semibold text-[#008080]">
+                  {plan.title} Plan
+                </h3>
 
-              <span className="inline-block mt-1 text-sm text-gray-500 bg-[#E5E9EB] px-2 py-0.5 rounded w-25 h-5">
-                {plan.users}
-              </span>
+                <span className="text-sm text-gray-500 bg-[#E5E9EB] px-2 py-0.5 rounded">
+                  {plan.users}
+                </span>
               </div>
 
               <p className="text-sm text-gray-500 mt-3">
@@ -78,7 +89,7 @@ export default function PricingModal({
                 industry. Lorem Ipsum has been the industry’s standard dummy.
               </p>
 
-              <span className="inline-block text-xs font-semibold bg-[#F9CF4A] px-2 py-1 rounded mt-8 mb-3 md:mt-30">
+              <span className="inline-block text-xs font-semibold bg-[#F9CF4A] px-2 py-1 rounded mt-6 mb-3">
                 PRODUCT OFFERINGS
               </span>
 
@@ -91,24 +102,20 @@ export default function PricingModal({
             {/* RIGHT COLUMN */}
             <div className="bg-[#FAFAFA] rounded-lg p-4 sm:p-5">
               
-              {/* Payment type */}
               <div className="bg-gray-100 rounded-lg p-4 mb-6">
                 <h4 className="font-semibold text-[#008080]">
                   Yearly Payment
                 </h4>
                 <p className="text-sm text-gray-600">
-                  $9 Monthly – Per User
+                  $9 Monthly - Per User
                 </p>
               </div>
 
-              {/* Company info */}
-              <h4 className="text-sm font-medium mb-4">
+              <h4 className="text-sm font-medium mb-3">
                 Company Information
               </h4>
 
               <div className="space-y-4">
-                
-                {/* Org name */}
                 <div>
                   <p className="text-gray-500 text-sm mb-1">
                     Organization Name
@@ -119,18 +126,15 @@ export default function PricingModal({
                   />
                 </div>
 
-                {/* Org email */}
                 <div>
                   <p className="text-gray-500 text-sm mb-1">
                     Organization Email
                   </p>
-
                   <div className="relative">
                     <input
                       className="w-full bg-gray-100 rounded-lg px-3 py-2 pr-28 text-sm"
                       placeholder="ithorizons.com"
                     />
-
                     <button
                       onClick={onVerifyEmail}
                       className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 text-xs text-gray-500 underline opacity-70 hover:opacity-100"
@@ -139,9 +143,9 @@ export default function PricingModal({
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        strokeWidth={1.5}
+                        strokeWidth={2.5}
                         stroke="currentColor"
-                        className="w-4 h-4"
+                        className="w-4 h-4 text-amber-600"
                       >
                         <path
                           strokeLinecap="round"
@@ -154,7 +158,6 @@ export default function PricingModal({
                   </div>
                 </div>
 
-                {/* Sector */}
                 <div>
                   <p className="text-gray-500 text-sm mb-1">
                     Sector
@@ -168,7 +171,6 @@ export default function PricingModal({
                   </select>
                 </div>
 
-                {/* Users */}
                 <div>
                   <p className="text-gray-500 text-sm mb-1">
                     Number of Users
@@ -180,7 +182,6 @@ export default function PricingModal({
                 </div>
               </div>
 
-              {/* Totals */}
               <div className="border-t mt-6 pt-4 space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-500">Subtotal</span>
@@ -188,7 +189,7 @@ export default function PricingModal({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-500">Tax</span>
-                  <span>$0.00 USD</span>
+                  <span>$$0.00 USD</span>
                 </div>
                 <div className="flex justify-between font-semibold">
                   <span>Billed Total</span>
@@ -196,8 +197,7 @@ export default function PricingModal({
                 </div>
               </div>
 
-              {/* Action */}
-              <button className="mt-4 w-45 h-9 cursor-pointer bg-gray-200 text-gray-400 py-2 rounded-lg  hover:bg-teal-600 ml-22 md:ml-100">
+              <button className="mt-4 w-full bg-gray-200 text-gray-400 py-2 rounded-lg hover:bg-teal-600 hover:text-white">
                 Generate Invoice
               </button>
             </div>

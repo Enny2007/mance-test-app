@@ -18,7 +18,7 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
 
   return (
     <>
-      <header className="sticky top-0 z-1000 w-full bg-white py-4 shadow-sm">
+      <header className="sticky top-0 z-50 w-full bg-white py-4 shadow-sm">
         <div className="mx-5 flex max-w-1200px items-center justify-between md:mx-20">
           <img src={logo} alt="Logo" className="logo" />
 

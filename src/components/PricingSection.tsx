@@ -2,6 +2,7 @@ import { useState } from "react";
 import PricingCard from "./PricingCard";
 import PricingModal from "./PricingModal";
 import pricingBadge from "../assets/pricingBadge.svg";
+import VerifyEmailModal from "./VerifyEmailModal";
 
 const pricingPlans = [
   {
@@ -59,6 +60,7 @@ export type PricingPlan = (typeof pricingPlans)[number];
 const PricingSection: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
   const [isPricingOpen, setIsPricingOpen] = useState(false);
+  const [isVerifyOpen, setIsVerifyOpen] = useState(false);
 
   const handleSelectPlan = (plan: PricingPlan) => {
     setSelectedPlan(plan);
@@ -69,10 +71,13 @@ const PricingSection: React.FC = () => {
     setIsPricingOpen(false);
     setSelectedPlan(null);
   };
-
   const handleVerifyEmail = () => {
-    
-    console.log("Verify email clicked");
+    setIsPricingOpen(false);
+    setIsVerifyOpen(true);
+  };
+
+  const handleCloseVerifyModal = () => {
+    setIsVerifyOpen(false);
   };
 
   return (
@@ -80,8 +85,8 @@ const PricingSection: React.FC = () => {
       <div className="max-w-sm mx-auto">
         <img src={pricingBadge} alt="Pricing Badge" className="mb-4 mx-auto" />
         <h2 className="text-4xl font-semibold mb-4 md:text-5xl w-120">
-          Pick Your Plan,{" "}
-          <span className="text-[#008080]">Choose </span> Your Product
+          Pick Your Plan, <span className="text-[#008080]">Choose </span> Your
+          Product
         </h2>
       </div>
 
@@ -102,6 +107,8 @@ const PricingSection: React.FC = () => {
         onClose={handleCloseModal}
         onVerifyEmail={handleVerifyEmail}
       />
+
+      {isVerifyOpen && <VerifyEmailModal onClose={handleCloseVerifyModal} />}
     </section>
   );
 };
