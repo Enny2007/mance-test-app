@@ -17,9 +17,10 @@ export default function SupportResources() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-        <div className="md:col-span-1 rounded-xl ml-10 overflow-hidden relative md:w-150 md:ml-2">
-          <img src={educationalImg} alt="Educational Content" />
-        </div>
+        <div className="md:col-span-1 rounded-xl mx-2 md:ml-2 overflow-hidden relative md:w-150">
+  <img src={educationalImg} alt="Educational Content" />
+</div>
+
 
         <div className="bg-[#FFFFFF] rounded-xl p-6 mx-auto flex flex-col justify-center  w-70 h-130 md:ml-50">
           <img src={faqIcon} alt="FAQ Icon" className="w-20 mb-4" />

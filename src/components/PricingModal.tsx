@@ -33,7 +33,6 @@ export default function PricingModal({
       document.body.style.overflow = "hidden";
       setView("pricing");
     }
-   
   }, [isOpen]);
 
   if (!isOpen || !plan) return null;
@@ -226,12 +225,14 @@ export default function PricingModal({
                     </div>
                   </div>
 
-                  <button
-                    onClick={() => setView("invoice")}
-                    className="mt-4 mb-50 w-50 ml-60 bg-gray-200 text-gray-600 py-2 rounded-lg hover:bg-teal-600 hover:text-white md:mb-0 md:ml-76 md:w-40"
-                  >
-                    Generate Invoice
-                  </button>
+                  <div className="flex justify-end mt-4">
+                    <button
+                      onClick={() => setView("invoice")}
+                      className="w-full sm:w-40 bg-gray-200 text-gray-600 py-2 rounded-lg hover:bg-teal-600 hover:text-white"
+                    >
+                      Generate Invoice
+                    </button>
+                  </div>
                 </div>
               </div>
             </>

@@ -28,9 +28,9 @@ const GovernmentLayout = () => {
     <>
       <Header onRequestDemo={() => {}} />
 
-      <section className="bg-[#FAFAFA] px-8">
-        <div className="my-5 mx-10">
-          <nav className="mb-2 text-[10px] text-gray-500">
+      <section className="bg-[#FAFAFA] px-6">
+        <div className="my-6 max-w-6xl mx-auto ">
+          <nav className="mb-15 text-[10px] text-gray-500">
             <Link to="/" className="hover:text-[#008080] transition">
               Homepage
             </Link>
@@ -46,10 +46,10 @@ const GovernmentLayout = () => {
             <div className="">
               <img src={GoveBadge} alt="Image" className=" w-40 " />
 
-              <h3 className="pt-4 text-3xl font-bold sm:w-90 ">
+              <h3 className="pt-4 text-3xl font-bold w-full md:max-w-lg">
                 Driving Policy Execution with Transparency and Accountability
               </h3>
-              <p className="text-sm text-gray-500 mt-2 pb-4 sm:w-140">
+              <p className="text-sm text-gray-500 mt-2 pb-4 w-full md:max-w-xl">
                 Mance helps government agencies and public institutions turn
                 policy objectives into measurable actions. From strategic
                 planning to task delegation and KPI tracking, it ensures
@@ -65,16 +65,16 @@ const GovernmentLayout = () => {
             </div>
 
             <div>
-              <img src={GovImage} className="w-100 md:mx-15" />
-
-
-
+              <img
+                src={GovImage}
+                className="w-full max-w-sm mx-auto md:max-w-md md:mx-0"
+              />
             </div>
           </div>
         </div>
       </section>
       <GovernmentChallenges />
-      <GovernmentBenefits/>
+      <GovernmentBenefits />
       <GovernmentFAQ />
       <Demo onRequestDemo={handleRequestDemo} />
       <SupportResources />

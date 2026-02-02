@@ -82,9 +82,9 @@ const PricingSection: React.FC = () => {
 
   return (
     <section className="bg-white py-24 px-10">
-      <div className="max-w-sm mx-auto">
+      <div className="mx-auto">
         <img src={pricingBadge} alt="Pricing Badge" className="mb-4 mx-auto" />
-        <h2 className="text-4xl font-semibold mb-4 md:text-5xl w-120">
+        <h2 className="text-5xl font-semibold mb-4 md:text-6xl text-center leading-tight md:mx-auto md:w-150 ">
           Pick Your Plan, <span className="text-[#008080]">Choose </span> Your
           Product
         </h2>
