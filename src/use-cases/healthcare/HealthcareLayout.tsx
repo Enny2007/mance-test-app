@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import DemoModal from "../../components/DemoModal";
 import Demo from "../../components/Demo";
-import HealthCareFAQ from "../healthcare/HealthCareFAQ";
+import HealthCareFAQ from "./HealthCareFAQ";
 import SupportResources from "../../components/SupportResources";
 import Efficiency from "../../components/Efficiency";
 import { useState } from "react";

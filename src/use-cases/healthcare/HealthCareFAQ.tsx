@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FaqBadge from "../../assets/faqBadge.svg";
 
-
 const faqs = [
   {
     question: "What Plan Fits Health",
