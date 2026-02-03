@@ -23,7 +23,9 @@ const Home = () => {
       <ScrollCards />
       <UseCasesSection/>
       <PricingSection/>
-      <Demo/>
+      <Demo onRequestDemo={function (): void {
+        throw new Error("Function not implemented.");
+      } }/>
       <SupportResources/>
       <EfficiencyBanner/>
       <Footer/>

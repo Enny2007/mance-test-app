@@ -14,16 +14,17 @@ export default function Efficiency() {
 
             <a
               href="#"
-              className="inline-flex items-center gap-2 bg-white text-[#008080] px-5 py-3 rounded-md font-bold hover:bg-gray-200 transition"
+              className="inline-flex items-center gap-2 bg-white text-[#008080] px-5 py-3 rounded-md font-bold btn-learn-more"
             >
               Learn How
-              <svg
+              <figure className="img-box">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="size-6"
+                className="size-6 svg"
               >
                 <path
                   stroke-linecap="round"
@@ -31,6 +32,9 @@ export default function Efficiency() {
                   d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
                 />
               </svg>
+
+              </figure>
+              
             </a>
           </div>
 
